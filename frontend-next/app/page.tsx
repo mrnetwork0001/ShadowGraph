@@ -144,7 +144,7 @@ export default function Home() {
                         SHADOWGRAPH
                     </h1>
                     <p className="text-neonCyan font-mono text-sm tracking-widest mt-4">
-                        NEON PRIVACY // ARCIUM RTG
+                        NEON PRIVACY
                     </p>
                 </div>
 
@@ -195,7 +195,7 @@ export default function Home() {
 
                     {(loading || results) && (
                         <div className="bg-black p-4 rounded border border-gray-800 font-mono text-sm shadow-inner mt-4 h-48 overflow-y-auto">
-                            <div className="text-gray-500 text-xs mb-2 border-b border-gray-800 pb-2">Terminal [Arcium_RTG]</div>
+                            <div className="text-gray-500 text-xs mb-2 border-b border-gray-800 pb-2">Terminal</div>
                             <div className="space-y-2 text-neonCyan">
                                 {progressMsg && (
                                     <div className="animate-pulse">
@@ -217,6 +217,10 @@ export default function Home() {
                         </div>
                     )}
                 </div>
+            </div>
+
+            <div className="mt-8 text-center text-gray-500 font-mono text-xs tracking-widest">
+                Built by <a href="https://x.com/encrypt_wizard" target="_blank" rel="noopener noreferrer" className="text-neonCyan hover:text-white transition-colors underline decoration-neonCyan/50 underline-offset-4">MrNetwork</a>
             </div>
         </main>
     );
