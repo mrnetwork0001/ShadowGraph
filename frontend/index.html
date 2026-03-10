@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShadowGraph | Private Contact Discovery</title>
+    <!-- Google Fonts for Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background grid effect -->
+    <div class="cyber-grid"></div>
+
+    <main class="app-container">
+        <header class="app-header">
+            <h1 class="glitch-text" data-text="SHADOWGRAPH">SHADOWGRAPH</h1>
+            <p class="subtitle">PRIVATE CONTACT DISCOVERY // ARCIUM RTG</p>
+            <div class="status-indicator">
+                <span class="dot blinking"></span>
+                <span class="status-text">SYSTEM SECURE</span>
+            </div>
+        </header>
+
+        <section class="card connection-card">
+            <div class="card-header">
+                <h2>// SOLANA ORCHESTRATION</h2>
+            </div>
+            <div class="card-content">
+                <button id="connectWalletBtn" class="cyber-btn primary">
+                    <span class="btn-text">CONNECT WALLET</span>
+                    <span class="btn-glitch"></span>
+                </button>
+                <div id="walletAddress" class="wallet-address hidden"></div>
+            </div>
+        </section>
+
+        <section class="card action-card">
+            <div class="card-header">
+                <h2>// INITIATE P.S.I. PROTOCOL</h2>
+                <span class="info-badge">ARCIS CIRCUIT</span>
+            </div>
+            <div class="card-content">
+                <p class="description">Upload your hashed contact list to discover mutual connections. Data remains encrypted on-chain via Arcium RTG.</p>
+                <div class="file-upload-wrapper">
+                    <input type="file" id="contactFile" accept=".csv,.json" class="file-input">
+                    <label for="contactFile" class="file-label">
+                        <span class="upload-icon">⎍</span>
+                        <span class="upload-text">SELECT DATA PAYLOAD</span>
+                    </label>
+                </div>
+                <button id="runDiscoveryBtn" class="cyber-btn secondary" disabled>
+                    <span class="btn-text">RUN DISCOVERY</span>
+                    <span class="btn-scan-line"></span>
+                </button>
+            </div>
+        </section>
+
+        <section id="resultsSection" class="card results-card hidden">
+            <div class="card-header">
+                <h2>// MUTUAL CONNECTIONS</h2>
+            </div>
+            <div class="card-content">
+                <div class="terminal-shell">
+                    <div class="terminal-header">
+                        <span>Terminal [Arcium_RTG]</span>
+                    </div>
+                    <div class="terminal-body" id="terminalOutput">
+                        <!-- Output lines will be injected here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
